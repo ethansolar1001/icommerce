@@ -1,0 +1,22 @@
+version: "3.8"
+services:
+  db:
+    image: mariadb:10.5
+    restart: always
+    ports:
+      - "3307:3306"
+    volumes:
+      - ./db/scripts:/docker-entrypoint-initdb.d
+      - db:/var/lib/mysql
+    environment:
+      - MYSQL_ROOT_PASSWORD=P@ssw0rd
+
+  nats-streaming:
+    image: nats-streaming:latest
+    restart: always
+    ports:
+      - "4222:4222"
+      - "8222:8222"
+
+volumes:
+  db:

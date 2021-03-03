@@ -1,0 +1,77 @@
+{
+  "name": "audit-service",
+  "version": "0.0.1",
+  "description": "",
+  "author": "",
+  "private": true,
+  "license": "UNLICENSED",
+  "scripts": {
+    "prebuild": "rimraf dist",
+    "build": "nest build",
+    "format": "prettier --write \"src/**/*.ts\" \"test/**/*.ts\"",
+    "start": "nest start",
+    "start:dev": "nest start --watch",
+    "start:debug": "nest start --debug --watch",
+    "start:prod": "node dist/main",
+    "lint": "tslint -p tsconfig.json -c tslint.json",
+    "test": "jest --coverage --coverageReporters=html --coverageReporters=text --coverageReporters=text-summary --coverageDirectory ../TestCoverageReportTemp --detectOpenHandles --forceExit --expand --errorOnDeprecated --logHeapUsage --runInBand --passWithNoTests",
+    "test:watch": "jest --watch",
+    "test:cov": "jest --coverage",
+    "test:debug": "node --inspect-brk -r tsconfig-paths/register -r ts-node/register node_modules/.bin/jest --runInBand",
+    "test:e2e": "jest --config ./test/jest-e2e.json",
+    "migrate:cli": "ts-node -r tsconfig-paths/register ./node_modules/typeorm/cli.js --config src/config/database.config.ts",
+    "migrate:create": "npm run migrate:cli migration:create -- -n",
+    "migrate:generate": "npm run migrate:cli migration:generate -- -n",
+    "migrate:up": "npm run migrate:cli migration:run",
+    "migrate:down": "npm run migrate:cli migration:revert"
+  },
+  "dependencies": {
+    "@nestjs/common": "^7.6.13",
+    "@nestjs/config": "^0.6.3",
+    "@nestjs/core": "^7.6.13",
+    "@nestjs/microservices": "^7.6.13",
+    "@nestjs/platform-express": "^7.6.13",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "lodash": "^4.17.21",
+    "mysql": "^2.18.1",
+    "node-nats-streaming": "^0.3.2",
+    "typeorm": "^0.2.31",
+    "winston": "^3.3.3"
+  },
+  "devDependencies": {
+    "@nestjs/cli": "^7.5.1",
+    "@nestjs/schematics": "^7.1.3",
+    "@nestjs/testing": "^7.5.1",
+    "@types/jest": "^26.0.15",
+    "@types/node": "^14.14.6",
+    "@types/supertest": "^2.0.10",
+    "@typescript-eslint/eslint-plugin": "^4.15.2",
+    "@typescript-eslint/parser": "^4.15.2",
+    "eslint": "^7.20.0",
+    "eslint-config-prettier": "7.2.0",
+    "eslint-plugin-prettier": "^3.1.4",
+    "jest": "^26.6.3",
+    "prettier": "^2.1.2",
+    "supertest": "^6.0.0",
+    "ts-jest": "^26.4.3",
+    "ts-loader": "^8.0.8",
+    "ts-node": "^9.0.0",
+    "tsconfig-paths": "^3.9.0",
+    "typescript": "^4.0.5"
+  },
+  "jest": {
+    "moduleFileExtensions": [
+      "js",
+      "json",
+      "ts"
+    ],
+    "rootDir": "src",
+    "testRegex": ".spec.ts$",
+    "transform": {
+      "^.+\\.(t|j)s$": "ts-jest"
+    },
+    "coverageDirectory": "./coverage",
+    "testEnvironment": "node"
+  }
+}
