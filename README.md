@@ -5,14 +5,14 @@ NodeJS v12+
 Notes: This project leverage nestjs extensively. Reference document: https://docs.nestjs.com/
 
 ## Sequence diagram
-![sequence diagram](https://github.com/ethansolar1001/icommerce/sequence-diagram.png)
+![sequence diagram](https://github.com/ethansolar1001/icommerce/blob/main/sequence-diagram.png)
 
 ## Db diagram
 ### Product service 
-![product-service db diagram](https://github.com/ethansolar1001/icommerce/product-service.png)
+![product-service db diagram](https://github.com/ethansolar1001/icommerce/blob/main/product-service.png)
 
 ### Audit service
-![product-service db diagram](https://github.com/ethansolar1001/icommerce/audit-service.png)
+![product-service db diagram](https://github.com/ethansolar1001/icommerce/blob/main/audit-service.png)
 
 ## Project structure
 
