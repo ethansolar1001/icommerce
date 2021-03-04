@@ -136,7 +136,7 @@ Notes: This project leverage nestjs extensively. Reference document: https://doc
     │   │       └── numberic-transformer.ts
     │   └── swagger-config.ts
     ├── test
-    │   ├── e2e
+    │   ├── integration
     │   └── unit
     ├── tsconfig.build.json
     ├── tsconfig.json
@@ -229,8 +229,10 @@ yarn test
 ```
 
 As this is an exercise, I just implement 2 tests for each testing level (integration & unittesting) for demonstration purpose:
+
 test/integration/product.integration.spec -> for integration test
-test/unit/modules/product/product-service.spec.ts
+
+test/unit/modules/product/product-service.spec.ts -> unit test
 
 ## API document
 Navigate to http://localhost:3000/api for api document (product-service)
