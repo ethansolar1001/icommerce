@@ -227,3 +227,11 @@ test/unit/modules/product/product-service.spec.ts
 
 ## API document
 Navigate to http://localhost:3000/api for api document (product-service)
+
+## Main frameworks/libs:
+- nestjs
+- expressjs
+- typeorm
+- jest
+- mysql
+- node-nats-streaming
