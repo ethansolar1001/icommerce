@@ -1,6 +1,7 @@
 version: "3.8"
 services:
   db:
+    container_name: mariadb
     image: mariadb:10.5
     restart: always
     ports:
@@ -12,6 +13,7 @@ services:
       - MYSQL_ROOT_PASSWORD=P@ssw0rd
 
   nats-streaming:
+    container_name: nats-streaming
     image: nats-streaming:latest
     restart: always
     ports:
