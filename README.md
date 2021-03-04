@@ -143,6 +143,13 @@ Notes: This project leverage nestjs extensively. Reference document: https://doc
     └── yarn.lock
 ```
 
+## Software principles & design patterns:
+As I used nestjs, it inherited serveral design principles from it such as modular, single responsibility, depedency injecton..etc
+
+I just added few patterns such as:
+- Repository pattern
+- Builder pattern (transform query dto to ORM criteria)
+
 ## Running
 
 ### Bootstrap nast-streaming & mariadb:
